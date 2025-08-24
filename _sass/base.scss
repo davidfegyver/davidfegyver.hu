@@ -143,7 +143,24 @@ a:hover {
 .listitem_post {
   border-bottom: thin solid #f8f8f0;
   margin-bottom: 16px;
+  padding: 16px;
   padding-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.listitem_post:hover {
+  background-color: #05bc79;
+  color: #262a33;
+  text-decoration: none;
+}
+
+.listitem_post:hover .severity-tag {
+  color: #05bc79;
+  background-color: #262a33;
 }
 
 .listitem_post_title {
@@ -170,6 +187,7 @@ a:hover {
   letter-spacing: 0.7px;
   margin-left: 8px;
   color: #262a33;
+  transition: all 0.3s ease;
 }
 
 .severity-low {
