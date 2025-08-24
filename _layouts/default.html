@@ -13,16 +13,14 @@
     window.NekoType = "{{site.webneko}}";
 
     window.onload = () => {
-      let h = document.querySelector("h1");
+      let h = document.getElementsByTagName("h1")[0];
       let rect = h.getBoundingClientRect();
 
       new Neko(rect.right, rect.top + 8, false);
 
-
-      navigator?.userAgentData?.mobile || setTimeout(() => {
-
-        aNekos[0].active = true;
-      }, 2000)
+      mouse.x = box.boundWidth(rect.right);
+      mouse.y = box.boundHeight(rect.top + 8);
+      
     }
 
   </script>
