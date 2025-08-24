@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "JetBrains Mono", monospace;
   font-size: 1em;
   margin: 0;
   overflow-wrap: break-word;
@@ -35,14 +35,20 @@ hr {
   border: 0;
   overflow: visible;
   height: 1.5em;
+  color: #D5CED9;
+  letter-spacing: 1px;
+}
+
+h1{
+  letter-spacing: 2px;
 }
 
 hr::before {
-  content: '- - - - - - - ';
+  content: '------- ';
 }
 
 hr::after {
-  content: attr(data-content) ' - - - - - - -';
+  content: attr(data-content) ' -------';
 }
 
 p {
