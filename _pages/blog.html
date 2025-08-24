@@ -10,11 +10,16 @@ permalink: /blog/
 
 <div class="listitem_post">
 
-<a href="{{site.baseurl}}{{post.url}}" class="listitem_post_title">{{post.title}}</a>
+  <div class="post-title-wrapper">
+    <a href="{{site.baseurl}}{{post.url}}" class="listitem_post_title">{{post.title}}</a>
+    {% if post.severity %}
+      <span class="severity-tag severity-{{ post.severity | downcase }}">{{ post.severity }}</span>
+    {% endif %}
+  </div>
 
-<p class="listitem_post_description">{{post.description}}</p>
+  <p class="listitem_post_description">{{post.description}}</p>
 
-<p class="listitem_post_date">{{post.date | date: "%-d %B %Y" }}</p>
+  <p class="listitem_post_date">{{post.date | date: "%-d %B %Y" }}</p>
 
 </div>
 {% endfor %}

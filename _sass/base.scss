@@ -160,3 +160,50 @@ a:hover {
   font-size: 0.875em;
   margin: 10px 0px;
 }
+
+.severity-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.7px;
+  margin-left: 8px;
+  color: #262a33;
+}
+
+.severity-low {
+  background-color: #BEF4E9;
+}
+
+.severity-medium {
+  background-color: #FCF4CF;
+}
+
+.severity-high {
+  background-color: #FED8CD;
+}
+
+.severity-critical {
+  background-color: #FEE2E6;
+}
+
+.post-title-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .post-title-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .severity-tag {
+    margin-left: 0;
+    margin-top: 4px;
+  }
+}
