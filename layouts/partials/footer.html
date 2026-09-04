@@ -1,0 +1,16 @@
+<footer class="footer">
+  <div class="footer__inner">
+      <div class="copyright">
+        <span>{{ now.Year }} @ all meows reserved</span>
+      </div>
+  </div>
+</footer>
+
+{{ $menu := resources.Get "js/menu.js" | js.Build }}
+{{ $cp := resources.Get "js/code.js" | js.Build }}
+{{ $favicon := resources.Get "js/favicon.js" | js.Build }}
+{{ $now_playing := resources.Get "js/now-playing.js" | js.Build }}
+
+{{ $bundle := slice $menu $cp $favicon $now_playing | resources.Concat "bundle.js" | resources.Minify }}
+
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>

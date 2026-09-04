@@ -1,0 +1,120 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+/* Show scrollbar on touch devices */
+@media (pointer: none), (pointer: coarse) {
+  .header__inner {
+    scrollbar-width: thin;
+  }
+}
+
+.header__logo {
+  display: flex;
+  flex: 1;
+  gap: 2px;
+}
+
+/* Decorative dotted line after logo */
+.header__logo::after {
+  content: "";
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent) 2px,
+    transparent 2px,
+    transparent 10px
+  );
+  display: block;
+  margin-left: 8px;
+  width: 100%;
+}
+
+/* Dynamic accent color changes on hover */
+.header__logo:has(.accent--green:hover)::after {
+  --accent: var(--accent-green);
+}
+
+.header__logo:has(.accent--yellow:hover)::after {
+  --accent: var(--accent-yellow);
+}
+
+.header__logo:has(.accent--blue:hover)::after {
+  --accent: var(--accent-blue);
+}
+
+.header__logo:has(.accent--pink:hover)::after {
+  --accent: var(--accent-pink);
+}
+
+.header__logo:has(.accent--red:hover)::after {
+  --accent: var(--accent-red);
+}
+
+.header__logo:has(.accent--orange:hover)::after {
+  --accent: var(--accent-orange);
+}
+
+.header__logo:has(.accent--purple:hover)::after {
+  --accent: var(--accent-purple);
+}
+.header__logo a {
+  flex: 0 0 auto;
+  max-width: 100%;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: var(--accent);
+  color: var(--background);
+  padding: 5px 10px;
+  transition: padding 0.3s ease, background-color 0.3s ease;
+}
+.header-link {
+  padding: 5px 10px;
+}
+
+.logo:hover {
+  background-color: color-mix(in srgb, var(--accent) 75%, black);
+}
+
+.header__logo > .header-link:has(+ .header-link):hover{
+  padding-right: 15px;
+}
+
+.header__logo > .header-link + .header-link:hover{
+  padding-left: 15px;
+}
+
+.header__logo > .header-link:hover + .header-link{
+  padding-left: 5px;
+}
+
+.header__logo > .header-link:has(+ .header-link:hover){
+  padding-right: 5px;
+}
+
+
+.header__logo > :last-child {
+  margin-right: -2px;
+}
+
+
+@media print {
+  .header {
+    display: none;
+  }
+}

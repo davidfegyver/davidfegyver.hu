@@ -1,0 +1,13 @@
+<header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      {{ range $.Site.Menus.main }}
+        <a class="header-link logo {{ .Params.Accent }}" href="{{ .URL }}" {{ if .Params.NewTab -}} target="_blank" {{- end }}>
+          {{ if .Params.Bold }}<b>{{ end }}
+          {{ .Name }}
+          {{ if .Params.Bold }}</b>{{ end }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</header>

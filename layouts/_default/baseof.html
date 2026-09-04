@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.Language }}">
+
+<head>
+  {{ block "title" . }}
+  <title>{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ end }}</title>
+  {{ end }}
+  {{ partial "head.html" . }}
+</head>
+
+<body class="{{ .Page.Params.Accent | default " accent--green" }}">
+  {{ $container := cond ($.Site.Params.FullWidthTheme | default false) "container full" (cond ($.Site.Params.CenterTheme
+  | default false) "container center" "container") }}
+
+  <div class="{{- $container -}}{{- cond ($.Site.Params.oneHeadingSize | default false) " headings--one-size" "" }}">
+
+    {{ partial "header.html" . }}
+
+    <div class="content">
+      {{ block "main" . }}
+      {{ end }}
+    </div>
+
+    {{ block "footer" . }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+  </div>
+
+  <script src="https://webneko.net/n20171213.js"></script>
+  <script>
+    window.NekoType = "lucy";
+
+    window.onload = () => {
+      let h = document.getElementsByTagName("h1")[0] ||  document.getElementsByTagName("h2")[0]  || document.getElementsByClassName("header")[0];
+      let rect = h.getBoundingClientRect();
+
+
+      new Neko(rect.right, rect.top + 8, false);
+
+      mouse.x = box.boundWidth(rect.right);
+      mouse.y = box.boundHeight(rect.top + 8);
+
+      aNekos[0].active = true;
+
+    }
+
+  </script>
+</body>
+
+</html>
