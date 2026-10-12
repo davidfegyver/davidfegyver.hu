@@ -1,17 +1,17 @@
 :root {
-  --background: #1a170f;
-  --foreground: #eceae5;
-  --accent-blue: oklch(70.7% 0.165 254.624);
-  --accent-green: oklch(76.5% 0.177 163.223);
-  --accent-orange: oklch(83.7% 0.128 66.29);
-  --accent-purple: oklch(70.2% 0.183 293.541);
-  --accent-pink: oklch(83.3% 0.145 321.434);
-  --accent-red: oklch(81% 0.117 11.638);
-  --accent-yellow: #eec35e;
+  --background: #1e1e2e;
+  --foreground: #cdd6f4;
+  --accent-blue: #89b4fa;
+  --accent-green: #a6e3a1;
+  --accent-orange: #fab387;
+  --accent-purple: #cba6f7;
+  --accent-pink: #f5c2e7;
+  --accent-red: #f38ba8;
+  --accent-yellow: #f9e2af;
   --font-size: 1.02rem;
   --line-height: 1.54em;
   --radius: 0;
-  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(205, 214, 244, 0.1);
 }
 
 
