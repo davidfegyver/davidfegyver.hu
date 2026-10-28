@@ -28,7 +28,7 @@ async function checkListening() {
 
         if (container) {
             container.innerHTML = `
-                <h3>${isPlaying ? "Now playing" : "Last track played"}</h3>
+                <h2>${isPlaying ? "now playing" : "last track played"}</h2>
                 <a href="${track.url}" target="_blank" rel="noopener noreferrer">
                     ${track.artist['#text']} - ${cleanedTitle}
                 </a>
