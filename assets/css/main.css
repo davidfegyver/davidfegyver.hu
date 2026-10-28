@@ -555,3 +555,17 @@ iframe[src*="youtube.com"] {
   border: none;
   padding: 0;
 }
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.buttons img {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  image-rendering: pixelated;
+}

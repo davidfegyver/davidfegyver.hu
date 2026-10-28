@@ -20,5 +20,7 @@ sometimes i code and publish cool projects to [github](https://github.com/davidf
 
 ## friends
 
-[dcs0](https://dcs0.hu/)
-[levente](https://leventefazekas.hu/)
+<div class="buttons">
+<a href="https://davidfegyver.hu/"><img src="/88x31.gif" alt="davidfegyver.hu" width="88" height="31" title="feel free to use this button! ^^"></a>
+<a href="https://imol.ai/"><img src="https://imol.ai/buttons/imolai.svg" alt="imol.ai" width="88" height="31"></a>
+</div>
