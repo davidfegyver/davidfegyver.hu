@@ -4,8 +4,8 @@ class Favicon {
         
         this.original = {
             title: document.title,
-            icon: document.querySelector("link[rel*='icon']")?.href,
-            type: 'image/x-icon'
+            favicon: document.querySelector("link[rel*='icon']")?.href,
+            type: 'image/png'
         };
 
         document.addEventListener('visibilitychange', () => this.handleVisibility());
